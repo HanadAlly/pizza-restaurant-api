@@ -4,3 +4,9 @@ A RESTful API for managing pizza restaurants, pizzas, and their associations, bu
 ## Database Migration & Seeding
 Migration: Run flask db init to set up migrations, flask db migrate -m "Initial migration" to generate migration scripts, and flask db upgrade to apply them, creating pizza.db.
 Seeding: Run python server/seed.py to populate the database with sample restaurants, pizzas, and associations. Ensure PYTHONPATH=$PWD is set to resolve imports.
+
+### Validation Rules
+RestaurantPizza.price: Between 1 and 30.
+RestaurantPizza.restaurant_id: Must exist in restaurants.
+RestaurantPizza.pizza_id: Must exist in pizzas.
+
